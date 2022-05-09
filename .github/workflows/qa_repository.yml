@@ -14,6 +14,25 @@ jobs:
     uses: https://github.com/niranjanmaradapu/AppUI/blob/206b1b202a58b0141455749e5ebc8f7d8ca3a1ce/.github/workflows/app-ui.yml@DevOps
   call-workflow2:
     uses: https://github.com/niranjanmaradapu/usermanagement/blob/c7d16b831807aa8ebc194edab32867470d475316/.github/workflows/usermanagement.yml@DevOps 
+  call-workflow3:
+    uses: https://github.com/niranjanmaradapu/apigateway/blob/adfe77b6dd93a2abaca8134d062f1bb636bd672d/.github/workflows/apigateway.yml@DevOps
+  call-workflow4: 
+    uses: https://github.com/niranjanmaradapu/PointOfSale/blob/e6fd2c6dd6986a51b4ba815ef7294148c27520e5/.github/workflows/customer-management.yml@DevOps 
+  call-workflow5:
+    uses: https://github.com/niranjanmaradapu/PointOfSale/blob/e6fd2c6dd6986a51b4ba815ef7294148c27520e5/.github/workflows/new-sale-api.yml@DevOps
+  call-workflow6:
+    uses: https://github.com/niranjanmaradapu/PointOfSale/blob/e6fd2c6dd6986a51b4ba815ef7294148c27520e5/.github/workflows/promo-exchange.yml@DevOps
+  call-workflow7:
+    uses: https://github.com/niranjanmaradapu/Accounts/blob/331da5d07da48bc3930a8f729436dd42a1180822/.github/workflows/hsn-details.yml@DevOps
+  call-workflow8:
+    uses: https://github.com/niranjanmaradapu/Accounts/blob/331da5d07da48bc3930a8f729436dd42a1180822/.github/workflows/payment-gateway.yml@DevOps
+  call-workflow9:
+    uses: https://github.com/niranjanmaradapu/Inventory/blob/df54c0175813a09c405ead2572d2b51b647c5ae3/.github/workflows/inventory-module.yml@DevOps
+  call-workflow10:
+    uses: https://github.com/niranjanmaradapu/nodejspaymentlink/blob/47a3a4d3ff4e5702c2ece8da1c599ecd44b00ce7/.github/workflows/nodejspaymentlink.yml@DevOps
+  
+  
+
     
   build:
 
