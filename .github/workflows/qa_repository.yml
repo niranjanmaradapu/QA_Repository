@@ -1,113 +1,11 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: workflows collections CI
 
 on:
   push:
-    branches: DevOps
-#  pull_request:
-#    branches: [ master ]
+    branches: 
+    - DevOps
 
 jobs:
-  #job1:
-  #  call-workflow1:
-  #    uses: https://github.com/niranjanmaradapu/AppUI/blob/206b1b202a58b0141455749e5ebc8f7d8ca3a1ce/.github/workflows/app-ui.yml@DevOps
+  usermanagement-workflow:
+    uses: niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml
   
-  #job2:
-  #  call-workflow2:
-  #    uses: https://github.com/niranjanmaradapu/usermanagement/blob/c7d16b831807aa8ebc194edab32867470d475316/.github/workflows/usermanagement.yml@DevOps 
-  
-  #job3:
-  #  call-workflow3:
-  #    uses: https://github.com/niranjanmaradapu/apigateway/blob/adfe77b6dd93a2abaca8134d062f1bb636bd672d/.github/workflows/apigateway.yml@DevOps
-  
-  #job4:
-  #  call-workflow4: 
-  #    uses: https://github.com/niranjanmaradapu/PointOfSale/blob/e6fd2c6dd6986a51b4ba815ef7294148c27520e5/.github/workflows/customer-management.yml@DevOps 
-  
-  #job5:
-  #  call-workflow5:
-  #    uses: https://github.com/niranjanmaradapu/PointOfSale/blob/e6fd2c6dd6986a51b4ba815ef7294148c27520e5/.github/workflows/new-sale-api.yml@DevOps
-  
-  #job6:
-  #  call-workflow6:
-  #    uses: https://github.com/niranjanmaradapu/PointOfSale/blob/e6fd2c6dd6986a51b4ba815ef7294148c27520e5/.github/workflows/promo-exchange.yml@DevOps
-  
-  #job7:
-  #  call-workflow7:
-  #    uses: https://github.com/niranjanmaradapu/Accounts/blob/331da5d07da48bc3930a8f729436dd42a1180822/.github/workflows/hsn-details.yml@DevOps
-  
-  #job8:
-  #  call-workflow8:
-  #    uses: https://github.com/niranjanmaradapu/Accounts/blob/331da5d07da48bc3930a8f729436dd42a1180822/.github/workflows/payment-gateway.yml@DevOps
-  
-  job9:
-    runs-on: ubuntu-latest
-    steps:
-      call-workflow9:
-        - name: inventory-module
-          uses: https://github.com/niranjanmaradapu/Inventory/blob/df54c0175813a09c405ead2572d2b51b647c5ae3/.github/workflows/inventory-module.yml@DevOps
- 
- #job10:
- #  call-workflow10:
- #    uses: https://github.com/niranjanmaradapu/nodejspaymentlink/blob/47a3a4d3ff4e5702c2ece8da1c599ecd44b00ce7/.github/workflows/nodejspaymentlink.yml@DevOps
-
-  #steps: 
-  #- name: get 
-  #  run: |
-  #    kubectl get pods | grep inventory-module 
-
-# Below is the sample code
-jobs:
-  dep1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run FAILING script
-        run: exit 1 
-  dep2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run SUCCESS script
-        run: echo Success
-  job:
-    runs-on: ubuntu-latest
-    if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
-    needs: [dep1, dep2]
-    steps:
-      - name: Hello World        
-        env:
-          NEEDS: ${{ toJSON(needs) }}     
-        run: |
-          echo "$NEEDS"
-  nextjob:
-    runs-on: ubuntu-latest
-    if: ${{ always() }}
-    needs: [job]
-    steps:
-      - name: Hello World        
-        env:
-          NEEDS: ${{ toJSON(needs) }}     
-        run: |
-          echo "$NEEDS"
-
-    
-  #build:
-
-  #  runs-on: ubuntu-latest
-
-#    strategy:
-#      matrix:
-#        node-version: [12.x, 14.x, 16.x]
-#        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-#    steps:
-#    - uses: actions/checkout@v3
-#    - name: Use Node.js ${{ matrix.node-version }}
-#      uses: actions/setup-node@v3
-#      with:
-#        node-version: ${{ matrix.node-version }}
-#        cache: 'npm'
-#    - run: npm ci
-#    - run: npm run build --if-present
-#    - run: npm test
