@@ -6,18 +6,6 @@ on:
     - DevOps
 
 jobs:
-  test_usermanagement:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: 'niranjanmaradapu/usermanagement'
-      - uses: 'niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml'
-      
-      
-          
-
-
-
-
+  usermanagement-workflow:
+    uses: niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml@DevOps
   
