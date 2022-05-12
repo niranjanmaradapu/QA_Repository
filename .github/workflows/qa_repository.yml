@@ -8,3 +8,7 @@ on:
 jobs:
   usermanagement-workflow:
     uses: niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml@DevOps
+    with:
+      secrets: inherit
+
+  
