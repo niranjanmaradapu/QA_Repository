@@ -10,6 +10,7 @@ jobs:
     uses: niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml@DevOps
     secrets: inherit
 
+<<<<<<< HEAD
   hsn-details-workflow:
     uses: niranjanmaradapu/Accounts/.github/workflows/hsn-details.yml@DevOps
     secrets: inherit
@@ -60,4 +61,6 @@ jobs:
 
 
 
+=======
+>>>>>>> 325ffa88e7df9ae05e86c6a779d952f836a54da4
   
