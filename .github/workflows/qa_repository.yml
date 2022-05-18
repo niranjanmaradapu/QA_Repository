@@ -10,5 +10,54 @@ jobs:
     uses: niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml@DevOps
     secrets: inherit
 
+  hsn-details-workflow:
+    uses: niranjanmaradapu/Accounts/.github/workflows/hsn-details.yml@DevOps
+    secrets: inherit
+  
+  payment-gateway-workflow:
+    uses: niranjanmaradapu/Accounts/.github/workflows/payment-gateway.yml@DevOps
+    secrets: inherit
+
+  inventory-module-workflow:
+    uses: niranjanmaradapu/Inventory/.github/workflows/inventory-module.yml@DevOps
+    secrets: inherit
+
+  customer-management-workflow:
+    uses: niranjanmaradapu/PointOfSale/.github/workflows/customer-management.yml@DevOps
+    secrets: inherit
+
+  new-sale-api-workflow:
+    uses: niranjanmaradapu/PointOfSale/.github/workflows/new-sale-api.yml@DevOps
+    secrets: inherit
+
+  promo-exchange-workflow:
+    uses: niranjanmaradapu/PointOfSale/.github/workflows/promo-exchange.yml@DevOps
+    secrets: inherit
+
+  promotions-workflow:
+    uses: 
+    secrets: inherit
+
+  apigateway-workflow:
+    uses: niranjanmaradapu/apigateway/.github/workflows/apigateway.yml@DevOps
+    secrets: inherit
+  
+  AppUI-workflow:
+    uses: niranjanmaradapu/AppUI/.github/workflows/app-ui.yml@DevOps
+    secrets: inherit
+
+  nodejspaymentlink-workflow:
+    uses: niranjanmaradapu/nodejspaymentlink/.github/workflows/nodejspaymentlink.yml@DevOps
+    secrets: inherit
+
+  ServiceRegistryRepo-workflow:
+    uses: niranjanmaradapu/ServiceRegistryRepo/.github/workflows/service-registry.yml@DevOps
+    secrets: inherit
+
+    
+
+
+
+
 
   
