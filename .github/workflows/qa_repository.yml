@@ -58,8 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
     needs: [usermanagement-workflow, hsn-details-workflow]
-    job: 
-      steps: 
+    steps: 
       - name: 
         run: |
           echo "DONE"
