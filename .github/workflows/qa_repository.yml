@@ -10,7 +10,6 @@ jobs:
     uses: niranjanmaradapu/usermanagement/.github/workflows/usermanagement.yml@DevOps
     secrets: inherit
 
-
   hsn-details-workflow:
     uses: niranjanmaradapu/Accounts/.github/workflows/hsn-details.yml@DevOps
     secrets: inherit
@@ -36,7 +35,7 @@ jobs:
     secrets: inherit
 
   promotions-workflow:
-    uses: 
+    uses: niranjanmaradapu/PointOfSale/.github/workflows/promotions.yml@DevOps
     secrets: inherit
 
   apigateway-workflow:
@@ -56,5 +55,9 @@ jobs:
     secrets: inherit
 
     
+
+
+
+
 
   
