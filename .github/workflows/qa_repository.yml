@@ -60,6 +60,7 @@ jobs:
     needs: [usermanagement-workflow, hsn-details-workflow]
     job: 
       steps: 
+      - name: 
         run: |
           echo "DONE"
 
