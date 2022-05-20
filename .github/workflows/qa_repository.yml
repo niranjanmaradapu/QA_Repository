@@ -54,14 +54,13 @@ jobs:
     uses: niranjanmaradapu/ServiceRegistryRepo/.github/workflows/service-registry.yml@DevOps
     secrets: inherit
 
-  automation-testing: 
-    runs-on: ubuntu-latest
+  easy-auto-testing: 
+    uses: niranjanmaradapu/EasyRetailAutoTesting/.github/workflows/easyretailautotesing.yml@DevOps
+    secrets: inherit
     if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
     needs: [usermanagement-workflow, hsn-details-workflow]
-    steps: 
-      - name: 
-        run: |
-          echo "DONE"
+      
+
 
 
       
